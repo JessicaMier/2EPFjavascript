@@ -1,0 +1,34 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.titulo{
+    font-size: 50px;
+    text-align: center;
+    margin: 20px;
+    font-weight: bolder;
+    color: black;
+}
+
+.lugares{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+}
+.registrate{
+    margin: 30px;
+    text-transform: capitalize;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+h1{
+    font-size: 35px;
+    font-style: italic;
+    text-transform: capitalize;
+    margin: 10px;
+}
