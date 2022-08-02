@@ -7,16 +7,9 @@ class Paquete {
   }
 }
 //se crea el array q luego va a ser completado con datos de los imput
-
-let paquetes = []
-
-// consulto si existe el localStorage, sino lo creo.
-
-if(localStorage.getItem("paquetes")){
-  paquetes = JSON.parse(localStorage.getItem("paquetes"))
-}else{
-  localStorage.setItem("paquetes", JSON.stringify("paquetes"))
-}
+// consulto si existe el localStorage, sino un array vacio, creo el local storage recien cuando agrego algo
+//se emplea operadorn nullish
+const paquetes= JSON.parse(localStorage.getItem(paquetes)) ?? []
 
 //creo las constantes
 
@@ -34,6 +27,7 @@ formPaquetes.addEventListener('submit', (e) => {
       let paquete = new Paquete(datForm.get("destino"), datForm.get("hotel"), datForm.get("habitacion"), datForm.get("noches"))
       paquetes.push(paquete)
       console.log(paquetes)
+      //creo mi localStorage
       localStorage.setItem('paquetes', JSON.stringify(paquetes))
       formPaquetes.reset()
 // muestro en una card los datos ingresados por el usuario
@@ -66,7 +60,7 @@ formPaquetes.addEventListener('submit', (e) => {
         
 
         })
-
+        
       })
       
          
