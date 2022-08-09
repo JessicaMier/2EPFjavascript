@@ -7,9 +7,17 @@ class Paquete {
   }
 }
 //se crea el array q luego va a ser completado con datos de los imput
-// consulto si existe el localStorage, sino un array vacio, creo el local storage recien cuando agrego algo
-//se emplea operadorn nullish
-const paquetes= JSON.parse(localStorage.getItem(paquetes)) ?? []
+
+let paquetes = []
+// consulto si existe mi localStorage, sino lo creo
+
+if(localStorage.getItem("paquetes")){
+  paquetes = JSON.parse(localStorage.getItem("paquetes"))
+}else{
+  localStorage.setItem("paquetes", JSON.stringify("paquetes"))
+}
+
+
 
 //creo las constantes
 
